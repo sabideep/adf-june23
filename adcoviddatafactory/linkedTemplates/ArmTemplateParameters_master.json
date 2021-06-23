@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adcoviddatafactory"
+		},
+		"ls_source_sa_connectionString": {
+			"value": ""
+		},
+		"ls_sqlDB_connectionString": {
+			"value": ""
+		},
+		"ls_http_opendata_ecdc_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseUrl}"
+		},
+		"ls_keyvault_properties_typeProperties_baseUrl": {
+			"value": "@{linkedService().devKeyVault}"
+		},
+		"ls_sadestination_dl_properties_typeProperties_url": {
+			"value": "https://destinationsaadf.dfs.core.windows.net"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
