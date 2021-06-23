@@ -1,0 +1,22 @@
+{
+	"name": "ls_source_sa",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=adfsourcesa;EndpointSuffix=core.windows.net;",
+			"accountKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_keyvault",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"devKeyVault": "https://dev-adf.vault.azure.net/"
+					}
+				},
+				"secretName": "dev-source-sa"
+			}
+		}
+	}
+}

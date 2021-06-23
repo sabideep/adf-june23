@@ -1,0 +1,22 @@
+{
+	"name": "ls_sadestination_dl",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://destinationsaadf.dfs.core.windows.net",
+			"accountKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_keyvault",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"devKeyVault": "https://dev-adf.vault.azure.net/"
+					}
+				},
+				"secretName": "dev-dl-key"
+			}
+		}
+	}
+}
