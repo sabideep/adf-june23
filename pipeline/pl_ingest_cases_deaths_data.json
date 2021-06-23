@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "copy cases and death data",
+				"name": "copy cases and death data new",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
